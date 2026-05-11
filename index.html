@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protéger l’innocence</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main id="app">
+    
+    <section id="intro-screen" class="screen active">
+      <div class="overlay-card intro-card">
+        <p class="eyebrow">Un jeu symbolique inspiré d’<em>Un sac de billes</em></p>
+        <h1>Protéger l’Innocence</h1>
+        <p class="intro-text">
+          Vous êtes dans la place de Joseph et Maurice, et votre mission est de survivre leur voyage. Mais chaque choix coûte une partie de leur enfance.
+        </p>
+        <button id="start-btn" class="primary-btn">Commencer le voyage</button>
+      </div>
+    </section>
+
+    
+    <section id="map-screen" class="screen">
+      <div id="map-bg" class="background-layer"></div>
+
+      <header class="top-bar">
+        <div>
+          <h2>Protéger l’Innocence</h2>
+          <p id="map-instruction">Clique sur la prochaine étape du voyage.</p>
+        </div>
+
+        <div class="billes-panel">
+          <span class="billes-label">Billes restantes</span>
+          <div id="billes-counter" class="billes-counter"></div>
+        </div>
+      </header>
+
+      <div class="map-wrapper">
+        <button class="map-point" id="point-0" data-stop="0">
+          <span>Paris</span>
+        </button>
+
+        <button class="map-point" id="point-1" data-stop="1">
+          <span>Dax</span>
+        </button>
+
+        <button class="map-point" id="point-2" data-stop="2">
+          <span>Ligne</span>
+        </button>
+
+        <button class="map-point" id="point-3" data-stop="3">
+          <span>Nice</span>
+        </button>
+
+        <button class="map-point" id="point-4" data-stop="4">
+          <span>Retour</span>
+        </button>
+      </div>
+
+      <aside class="objective-card">
+        <h3>Objectif</h3>
+        <p>
+          Survivre jusqu’au retour à Paris. Mais dans ce monde, le coût est l'innocence.
+        </p>
+      </aside>
+    </section>
+
+    <!-- STOP SCREEN -->
+    <section id="stop-screen" class="screen">
+      <div id="stop-bg" class="background-layer"></div>
+
+      <header class="top-bar">
+        <button id="back-to-map-btn" class="small-btn">← Carte</button>
+
+        <div class="billes-panel">
+          <span class="billes-label">Billes restantes</span>
+          <div id="stop-billes-counter" class="billes-counter"></div>
+        </div>
+      </header>
+
+      <div class="stop-card">
+        <p id="stop-number" class="eyebrow"></p>
+        <h2 id="stop-title"></h2>
+        <p id="stop-scene"></p>
+
+        <div id="choices-container" class="choices-container"></div>
+      </div>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section id="result-screen" class="screen">
+      <div id="result-bg" class="background-layer"></div>
+
+      <div class="overlay-card result-card">
+        <p id="result-eyebrow" class="eyebrow"></p>
+        <h1 id="result-title"></h1>
+        <p id="result-message"></p>
+        <p id="result-extra" class="result-extra"></p>
+        <button id="result-btn" class="primary-btn">Continuer</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
